@@ -1,0 +1,6 @@
+#!ipxe
+kernel boot/wimboot
+initrd boot/bcd         BCD
+initrd boot/boot.sdi    boot.sdi
+initrd sources/boot_19h2drv.wim boot.wim
+boot
