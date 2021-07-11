@@ -37,8 +37,11 @@ A __registry hive__ example:
 
 Extracted content using `registry-dump bcd`:
 
+noted: `[2021-07-11 13:37:19.184502] INFO: regipy.registry: Hive type for bcd was not identified: O\WinPXE\efi\microsoft\boot\bcd`
+
+The actual content in json form:
+
 ```json
-[2021-07-11 13:37:19.184502] INFO: regipy.registry: Hive type for bcd was not identified: O\WinPXE\efi\microsoft\boot\bcd
 {
     "subkey_name": "Description",
     "path": "\\Description",
