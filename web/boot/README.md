@@ -43,11 +43,13 @@ Wikipedia:[WIM](https://en.wikipedia.org/wiki/Windows_Imaging_Format)
 
 # WinPE details
 
-[on iPXE](https://ipxe.org/howto/winpe)
+Howto [WinPE @ iPXE.org](https://ipxe.org/howto/winpe) - good an comprehensive source.
 
-[ADK install](https://www.easeus.com/partition-master/create-winpe-bootable-disk-for-all-windows-os.html)
+Microsoft [ADK install](https://www.easeus.com/partition-master/create-winpe-bootable-disk-for-all-windows-os.html) to make the actuall WinPE media, mainly the `boot.wim`.
 
-You would need only: __Deployment Tools__ and __Windows Preinstallation Environment (Windows PE)__ which should not eat that much space.
+You would need to install only: __Deployment Tools__ and __Windows Preinstallation Environment (Windows PE)__ which needs aprox. 3.6GB of free space - well it contains the Windows boot files and utilities.
+
+The Windows `install.wim` including __virtio__ drivers for NIC and DISK was around __519 MB__. The plain __WinPE__ could have __200 MB+__.
 
 To copy the WinPE files:
 
