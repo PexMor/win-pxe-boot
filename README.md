@@ -16,6 +16,7 @@ The purpose of this collection of script is to capture the process of network bo
 Section on [making WinPE ISO](web/boot#winpe-details).
 
 The just start the:
+
 0. make the network switch for testing `brhost`
 1. dnsmasq (host) - DHCP + DNS + TFTP server, listen on `brhost` IP
 2. nginx web server (dockerized) - HTTP SERVER, listen on `brhost` IP
