@@ -20,6 +20,8 @@ Simple set of files:
 * `web/boot/bcd.sdi` - the ramdisk (X: drive)
 * `web/sources/winpe.wim` - the actuall Windows PE (expanded into X:)
 
+Microsoft on [boot process](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771845(v=ws.10))
+
 > Note: The __WinPE__ is a base Windows Image, that can turn into __install__, __WinRE__ or other purpose short-lived instance of windows, with limited capabilities (i.e. w/o USERs, extra SW). There is a option to customize the bare image using [winpeshl.ini](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpeshlini-reference-launching-an-app-when-winpe-starts) an [example](https://ipxe.org/howto/winpe#adding_a_startup_batch_file) and/or [startnet.cmd](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/wpeinit-and-startnetcmd-using-winpe-startup-scripts)
 
 You might find useful to manipulate the `*.wim` images using [dism](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14)
