@@ -11,6 +11,10 @@ Steps:
 3. Test everything with KVM/QEMU (boot>network)
 4. Use on your network as needed
 
+> Note: The __WinPE__ is a base Windows Image, that can turn into __install__, __WinRE__ or other purpose short-lived instance of windows, with limited capabilities (i.e. w/o USERs, extra SW). There is a option to customize the bare image using [winpeshl.ini](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpeshlini-reference-launching-an-app-when-winpe-starts) an [example](https://ipxe.org/howto/winpe#adding_a_startup_batch_file) and/or [startnet.cmd](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/wpeinit-and-startnetcmd-using-winpe-startup-scripts)
+
+You might find useful to manipulate the `*.wim` images using [dism](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14)
+
 ## The hard part - files
 
 The network booting can be complicated. There are at least two boot environments the __BIOS__ and __UEFI__. Not taking into account the CoreBoot (former LinuxBoot). The initial test environment was __BIOS__ based KVM virtual machine.
