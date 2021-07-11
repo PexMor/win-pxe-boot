@@ -19,8 +19,8 @@ Good list of tools at [Ethical hacking and penetration testing](https://miloserd
 | winregfs          | Linux package: winregfs, Linux VFS/filesystem |
 | libregf           | Linux package: libregf-utils                  |
 
-* github:[mimikatz](https://github.com/gentilkiwi/mimikatz/wiki)
-* [NirSoft](https://www.nirsoft.net/windows_registry_tools.html)
+* [mimikatz@github](https://github.com/gentilkiwi/mimikatz/wiki): Windows based SSP patching tool (certificate and passwords)
+* [NirSoft Registry Utilities](https://www.nirsoft.net/windows_registry_tools.html) - Windows based: [RegScanner](https://www.nirsoft.net/utils/regscanner.html), [RegistryChangesView](https://www.nirsoft.net/utils/registry_changes_view.html), [RegFromApp](https://www.nirsoft.net/utils/reg_file_from_application.html), [RegDllView](https://www.nirsoft.net/utils/registered_dll_view.html), [ActiveXHelper](https://www.nirsoft.net/utils/axhelper.html), [RegFileExport](https://www.nirsoft.net/utils/registry_file_offline_export.html) 
 
 ```bash
 pipx install regipy
