@@ -28,7 +28,7 @@ To check contents of BCD (boot configuration data).
 bcdedit 
 ```
 
-In fact the BCD is a __registry hive__ which can be edited through `regedit.exe` in windows or eventually other tools (linux `pipx regipy`). More on __BCD__ content [bcd.md](bcd.md)
+In fact the BCD is a __registry hive__ which can be edited through `regedit.exe` in windows or eventually other tools (linux `pipx regipy`). More on __BCD__ content [bcd.md](../../bcd.md)
 
 # The BCD.SDI file
 
