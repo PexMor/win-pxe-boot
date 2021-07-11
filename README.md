@@ -15,10 +15,10 @@ Simple set of files:
 
 * [tftp/simple.ipxe](tftp/simple.ipxe) - to switch from __TFTP__ to __HTTP__
 * [web/next.ipxe](web/next.ipxe) - the next stage loaded over __HTTP__
-* `web/wimboot` - the magic wimboot (bootloader)
-* `web/boot/bcd` - the boot config (registry hive)
-* `web/boot/bcd.sdi` - the ramdisk (X: drive)
-* `web/sources/winpe.wim` - the actuall Windows PE (expanded into X:)
+* `web/wimboot` - the magic wimboot (bootloader, download at: https://github.com/ipxe/wimboot/releases)
+* `web/boot/bcd` - the boot config (registry hive, get from WinPE ISO)
+* `web/boot/bcd.sdi` - the ramdisk (X: drive, get from WinPE ISO)
+* `web/sources/winpe.wim` - the actuall Windows PE (expanded into X:, get from WinPE ISO)
 
 Microsoft on [boot process](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771845(v=ws.10))
 
