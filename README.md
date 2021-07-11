@@ -4,11 +4,18 @@ Reference for making Windows (10) boot from network/PXE i.e. inside KVM/QEMU
 
 The purpose of this collection of script is to capture the process of network booting the Windows in particular WinPE. Tested on Windows 10 (19H2), but should work on any Windows10+ eventually also for older versions but that might need some tweaks.
 
+Steps:
+
+1. Get `winpe.wim` [more](tftp/boot/README.md), `boot.wim` or `install.wim` from install ISO/CDROM @ `\sources\boot.wim` or `\sources\install.wim`
+2. Configure and run `DHCP` and `HTTP` servers (good tip is to use `dnsmasq`, `nginx` and optionally `php-fpm`)
+3. Test everything with KVM/QEMU (boot>network)
+4. Use on your network as needed
+
 ## The hard part - files
 
-The network booting can be complicated. There are at least two boot environments the BIOS and UEFI. Not taking into account the CoreBoot (former LinuxBoot). The initial test environment was BIOS based KVM virtual machine.
+The network booting can be complicated. There are at least two boot environments the __BIOS__ and __UEFI__. Not taking into account the CoreBoot (former LinuxBoot). The initial test environment was __BIOS__ based KVM virtual machine.
 
-The common issue is also gathering the correct files based on your PXE environment.
+The common issue is also gathering the correct files based on your __PXE__ environment.
 It migh be `pxelinux.0`, `undi.kpxe`, `boot32.efi`, `boot64.efi`. Also the subsequent stage `wimboot` requires few files from windows install `ISO` like `bcd`, `bcd.sdi`. Some other files are used directly from the `WIM` file.
 
 The way to build the virsh image can be following:
@@ -44,7 +51,7 @@ virt-install \
 | tee vm.xml
 ```
 
-That yielded `virsh.xml` like this:
+That yields file `virsh.xml` similar to this:
 
 ```xml
 <domain type='kvm'>

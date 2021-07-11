@@ -1,6 +1,7 @@
 #!ipxe
-kernel boot/wimboot
-initrd boot/bcd         BCD
-initrd boot/boot.sdi    boot.sdi
-initrd sources/boot_19h2drv.wim boot.wim
+cpuid --ext 29 && set arch amd64 || set arch x86
+kernel wimboot
+initrd ${arch}/boot/bcd          BCD
+initrd ${arch}/boot/boot.sdi     boot.sdi
+initrd -n boot.wim ${arch}/winpe.wim boot.wim
 boot
