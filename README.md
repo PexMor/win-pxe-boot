@@ -15,6 +15,8 @@ Steps:
 
 You might find useful to manipulate the `*.wim` images using [dism](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14)
 
+The __magic__ is done by __wimboot__ for [technical internals](https://ipxe.org/appnote/wimboot_architecture) check the [ipxe.org](https://ipxe.org) web.
+
 ## The hard part - files
 
 The network booting can be complicated. There are at least two boot environments the __BIOS__ and __UEFI__. Not taking into account the CoreBoot (former LinuxBoot). The initial test environment was __BIOS__ based KVM virtual machine.
