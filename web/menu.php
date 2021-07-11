@@ -8,5 +8,5 @@
     $data['post']=$_POST;
     $data['hdrs']=getallheaders();
     file_put_contents($trg,json_encode($data,JSON_PRETTY_PRINT));
-    readfile("/tftp/boot/menu.ipxe");
-    //readfile("/tftp/boot/vars.ipxe");
+    readfile("menu.ipxe");
+    //readfile("vars.ipxe");

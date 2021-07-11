@@ -56,7 +56,7 @@ net.bridge.bridge-nf-call-arptables = 0
 
 Principal steps:
 
-1. Get `winpe.wim` [more](tftp/boot/README.md), `boot.wim` or `install.wim` from install ISO/CDROM @ `\sources\boot.wim` or `\sources\install.wim`
+1. Get `winpe.wim` [more](web/boot/README.md), `boot.wim` or `install.wim` from install ISO/CDROM @ `\sources\boot.wim` or `\sources\install.wim`
 2. Configure and run `DHCP` and `HTTP` servers (good tip is to use `dnsmasq`, `nginx` and optionally `php-fpm`)
 3. Test everything with KVM/QEMU (boot>network)
 4. Use on your network as needed
