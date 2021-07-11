@@ -65,6 +65,13 @@ MakeWinPEMedia /UFD D:\WPEx64 I:
 MakeWinPEMedia /ISO D:\WPEx64 F:\WPE64.iso
 ```
 
+[ISO](https://en.wikipedia.org/wiki/ISO_9660) + [extensions](https://en.wikipedia.org/wiki/ISO_9660#Extensions_and_improvements), [UDF](https://en.wikipedia.org/wiki/Universal_Disk_Format), [WIM](https://en.wikipedia.org/wiki/Windows_Imaging_Format)
+
+in linux:
+
+* __UDF__ ~ `mount -t udf /dev/cdrom /mnt/cdrom`
+* __WIM__ ~ [WIMlib](https://wimlib.net/) - does a lot incl. NTFS extract, but might be behind the Windows world (~`DISM`), so please consider to use the __Native Windows__
+
 The default install path is `C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit`
 
 `WinPE` tree with `en-us` and `cs-cz` only languages left:
