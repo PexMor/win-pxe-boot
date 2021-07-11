@@ -9,6 +9,11 @@ In particular:
 * `bcd.sdi` - the ramdisk
 * `*.wim` - the actual Windows image data found in other folder [sources](../sources)
 
+File type indetified by magic.mgc:
+
+* `wimboot` ~ Linux kernel x86 boot executable bzImage, version v2.7.2, RW-rootFS                                                             
+* `boot.sdi` ~  System Deployment Image, PageAlignment 2, checksum 0x39, type PART (0x7) at 0x2000 3161088 bytes DOS/MBR boot sector, code offset 0x52+2, OEM-ID "NTFS    ", Media descriptor 0xf8, sectors/track 2, heads 16, hidden sectors 2, dos < 4.0 BootSector (0x80), FAT (1Y bit by descriptor); NTFS, sectors/track 2, sectors 6173, $MFT start cluster 2058, $MFTMirror start cluster 5162, clusters/RecordSegment 2, clusters/index block 8, serial number 050d60a27d60a0dc2; contains bootstrap NTLDR, type WIM at 0x306000 |
+
 # The Wimboot file
 
 At https://github.com/ipxe/wimboot go to releases and download either 32-bit or 64-bit.
@@ -23,9 +28,18 @@ To check contents of BCD (boot configuration data).
 bcdedit 
 ```
 
+In fact the BCD is a __registry hive__ which can be edited through `regedit.exe` in windows or eventually other tools (linux `pipx regipy`). More on __BCD__ content [bcd.md](bcd.md)
+
 # The BCD.SDI file
 
 The windows ramdisk `X:` drive.
+
+[System Deployment Image](https://en.wikipedia.org/wiki/System_Deployment_Image)
+
+# Windows Image format
+
+Wikipedia:[WIM](https://en.wikipedia.org/wiki/Windows_Imaging_Format)
+
 
 # WinPE details
 

@@ -15,7 +15,7 @@ Steps:
 
 You might find useful to manipulate the `*.wim` images using [dism](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14)
 
-The __magic__ is done by __wimboot__ for [technical internals](https://ipxe.org/appnote/wimboot_architecture) check the [ipxe.org](https://ipxe.org) web.
+The __magic__ is done by __wimboot__ for [technical internals](https://ipxe.org/appnote/wimboot_architecture) check the [ipxe.org/wimboot](https://ipxe.org/wimboot) web.
 
 ## The hard part - files
 
