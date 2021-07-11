@@ -13,8 +13,8 @@ Steps:
 
 Simple set of files:
 
-* `tftp/simple.ipxe` - to switch from __TFTP__ to __HTTP__
-* `web/next.ipxe` - the next stage loaded over __HTTP__
+* [tftp/simple.ipxe](tftp/simple.ipxe) - to switch from __TFTP__ to __HTTP__
+* [web/next.ipxe](web/next.ipxe) - the next stage loaded over __HTTP__
 * `web/wimboot` - the magic wimboot (bootloader)
 * `web/boot/bcd` - the boot config (registry hive)
 * `web/boot/bcd.sdi` - the ramdisk (X: drive)
