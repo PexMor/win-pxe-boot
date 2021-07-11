@@ -1,0 +1,6 @@
+#!ipxe
+kernel wimboot
+initrd boot/bcd                      BCD
+initrd boot/boot.sdi                 boot.sdi
+initrd -n boot.wim sources/winpe.wim boot.wim
+boot

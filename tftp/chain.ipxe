@@ -1,2 +1,2 @@
 #!ipxe
-chain http://192.168.100.1/menu.php?mac=${mac}&uuid=${uuid}
+chain http://gw/menu.php?mac=${mac}&uuid=${uuid}

@@ -11,6 +11,15 @@ Steps:
 3. Test everything with KVM/QEMU (boot>network)
 4. Use on your network as needed
 
+Simple set of files:
+
+* `tftp/simple.ipxe` - to switch from __TFTP__ to __HTTP__
+* `web/next.ipxe` - the next stage loaded over __HTTP__
+* `web/wimboot` - the magic wimboot (bootloader)
+* `web/boot/bcd` - the boot config (registry hive)
+* `web/boot/bcd.sdi` - the ramdisk (X: drive)
+* `web/sources/winpe.wim` - the actuall Windows PE (expanded into X:)
+
 > Note: The __WinPE__ is a base Windows Image, that can turn into __install__, __WinRE__ or other purpose short-lived instance of windows, with limited capabilities (i.e. w/o USERs, extra SW). There is a option to customize the bare image using [winpeshl.ini](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpeshlini-reference-launching-an-app-when-winpe-starts) an [example](https://ipxe.org/howto/winpe#adding_a_startup_batch_file) and/or [startnet.cmd](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/wpeinit-and-startnetcmd-using-winpe-startup-scripts)
 
 You might find useful to manipulate the `*.wim` images using [dism](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14)
