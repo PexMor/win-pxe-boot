@@ -6,7 +6,7 @@
 docker kill php-fpm
 docker run -id --rm \
     --name php-fpm \
-    --network container:nginx \
+    --network container:winpe \
     -v $(pwd)/rwdata:/rwdata \
     -v $(pwd)/tftp:/tftp \
     -v $(pwd)/web:/usr/share/nginx/html \
