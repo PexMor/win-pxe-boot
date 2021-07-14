@@ -11,5 +11,5 @@ ISO_PATH=$1
 
 echo "Dettach the ISO to sda if attached"
 virsh change-media $DOM sda --eject
-echo "Attach the ISO to sda"
+echo "Attach the ISO (ISO_PATH=$ISO_PATH) to sda"
 virsh change-media $DOM sda $ISO_PATH --insert
