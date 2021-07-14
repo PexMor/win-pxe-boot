@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# b: elevate privileges
+# requires NOPASS sudo
+echo "UID=$UID"
+if [ "$UID" -ne 0 ]; then
+    echo "Switching to root"
+    exec sudo "$0" "$@"
+fi
+# e: elevate privileges
+
 BD=$PWD/rwdata/vfd
 [ -d "$BD" ] || mkdir -p "$BD"
 
