@@ -1,9 +1,9 @@
 #!/bin/bash
 
-docker kill nginx
+docker kill winpe-nginx
 docker run -id --rm \
-    --name nginx \
+    --name winpe-nginx \
     --network container:winpe \
-    -v $(pwd)/ng.conf:/etc/nginx/conf.d/default.conf \
+    -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf \
     -v $(pwd)/web:/usr/share/nginx/html \
     nginx
