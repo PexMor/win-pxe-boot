@@ -1,7 +1,7 @@
 #!/bin/bash
 
 docker kill winpe-nginx
-docker run -id --rm \
+docker run -d --rm \
     --name winpe-nginx \
     --network container:winpe \
     -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf \

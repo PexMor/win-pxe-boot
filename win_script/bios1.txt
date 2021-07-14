@@ -1,0 +1,7 @@
+select disk 0
+clean
+create partition primary
+format quick fs=ntfs label="Windows"
+active
+assign letter="w"
+exit

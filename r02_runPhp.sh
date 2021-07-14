@@ -4,7 +4,7 @@
 [ -d rwdata/menu ] || mkdir -p rwdata/menu
 
 docker kill winpe-php-fpm
-docker run -id --rm \
+docker run -d --rm \
     --name winpe-php-fpm \
     --network container:winpe \
     -v $(pwd)/rwdata:/rwdata \

@@ -81,7 +81,7 @@ set -e
 
 VM_NAME=pxetest
 VM_CPU=1
-VM_NET_NAME=brpacker
+VM_NET_NAME=brhost
 VM_NIC_MAC=52:54:00:00:00:01
 VM_RAM=2048
 
