@@ -1,0 +1,1 @@
+echo list volume | diskpart
