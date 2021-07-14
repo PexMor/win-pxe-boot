@@ -1,1 +1,1 @@
-net use * /delete
+net use * /delete /yes
