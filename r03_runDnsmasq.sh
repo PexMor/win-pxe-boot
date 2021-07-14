@@ -13,7 +13,7 @@ docker run -d --rm \
     --network container:winpe \
     -v $PWD/dnsmasq.conf:/etc/dnsmasq.conf:ro \
     -v $PWD/tftp:/tftp:ro \
-    devries/dnsmasq
+    alvistack/dnsmasq-2.80
 }
 
 runInCont

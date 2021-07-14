@@ -1,8 +1,10 @@
 #!/bin/bash -x
 
+source 00cfg
+
 CONT_NAME=winpe
 BR_NAME=brhost
-IPP=192.168.100.2/24
+IPP=$IP_DNSMASQ/24
 NIC_H=wpe_host
 NIC_C=wpe_cont
 
