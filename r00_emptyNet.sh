@@ -21,6 +21,9 @@ if [ "$UID" -ne 0 ]; then
 fi
 # e: elevate privileges
 
+docker kill winpe-dnsmasq
+docker kill winpe-php-fpm
+docker kill winpe-nginx
 # start container
 docker run -d --rm \
     --network none \
