@@ -10,7 +10,10 @@
   <currentMemory unit='GiB'>2</currentMemory>
   <vcpu placement='static'>1</vcpu>
   <os>
-    <type arch='x86_64' machine='pc-q35-rhel7.6.0'>hvm</type>
+    <!-- used on Redhat/Fedora/CentOS -->
+    <!--type arch='x86_64' machine='pc-q35-rhel7.6.0'>hvm</type-->
+    <!-- used on Debian/Ubuntu/etc. -->
+    <type arch='x86_64' machine='pc-q35-5.2'>hvm</type>
     <boot dev='hd'/>
     <boot dev='cdrom'/>
     <boot dev='network'/>
@@ -43,7 +46,10 @@
     <suspend-to-disk enabled='no'/>
   </pm>
   <devices>
-    <emulator>/usr/libexec/qemu-kvm</emulator>
+    <!-- used on Redhat/Fedora/CentOS -->
+    <!--emulator>/usr/libexec/qemu-kvm</emulator-->
+    <!-- used on Debian/Ubuntu/etc. -->
+    <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
       <source file='/mnt/disk.qcow2' index='2'/>

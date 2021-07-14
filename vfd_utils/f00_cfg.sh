@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BD=$PWD/../rwdata/vfd
+BD=$XDIR/../rwdata/vfd
 BD=`readlink -f "$BD"`
 [ -d "$BD" ] || mkdir "$BD"
 DN=$BD/new_floppy.vfd
