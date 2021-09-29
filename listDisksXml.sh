@@ -62,11 +62,11 @@ setElVal domain/vcpu 4
 
 for ID in `seq 1 4`; do
     echo "#$ID"
-    $XML_CMD sel -t -c "/domain/devices/disk[$ID]"  tmp/tmp.xml | xml fo | highlight -S xml -O xterm256
+    $XML_CMD sel -t -c "/domain/devices/disk[$ID]"  tmp/tmp.xml | $XML_CMD fo | highlight -S xml -O xterm256
 done
 
 echo "...boot:"
-$XML_CMD sel -t -c "/domain/os"  tmp/tmp.xml | xml fo | highlight -S xml -O xterm256
+$XML_CMD sel -t -c "/domain/os"  tmp/tmp.xml | $XML_CMD fo | highlight -S xml -O xterm256
 
 echo "...disks:"
 $XML_CMD sel -t -m "/domain/devices/disk" -v 'concat(target/@dev,":",source/@file)' -n tmp/tmp.xml
