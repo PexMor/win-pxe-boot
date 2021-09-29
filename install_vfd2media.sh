@@ -19,6 +19,6 @@ mkfs.vfat -n "CIDATA" "$FLOPPY"
 MNTD="$BD/mount"
 [ -d "$MNTD" ] || mkdir -p "$MNTD"
 mount -o loop,utf8 -t vfat "$FLOPPY" "$MNTD"
-cp -fr "win_script/." "$MNTD/"
+cp -fr "install_vfd/." "$MNTD/"
 
 umount "$MNTD"
