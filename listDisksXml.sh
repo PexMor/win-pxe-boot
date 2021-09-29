@@ -2,6 +2,9 @@
 
 [ -d tmp ] || mkdir -p tmp
 
+# XML_CMD=xml
+XML_CMD=xmlstarlet
+
 function setDisk() {
     local ID=$1
     local V=$2
@@ -9,7 +12,7 @@ function setDisk() {
     # -S (or --ps)        - preserve non-significant spaces
     # -L (or --inplace)   - edit file inplace
     # -u "/domain/devices/disk[$ID]/source/@file" -v "$V" \
-    xml ed -L \
+    $XML_CMD ed -L \
         -d "/domain/devices/disk[$ID]/source" \
         -s "/domain/devices/disk[$ID]" -t elem --name source -v "" \
         -i "/domain/devices/disk[$ID]/source" -t attr -name file -v "$V" \
@@ -18,7 +21,7 @@ function setDisk() {
 
 function setBoot() {
     local V=$1
-    xml ed -L \
+    $XML_CMD ed -L \
         -d "/domain/os/boot" \
         -s "/domain/os" -t elem --name boot -v "" \
         -i "/domain/os/boot" -t attr -name dev -v "$V" \
@@ -28,12 +31,12 @@ function setBoot() {
 function setElVal() {
     local P=$1
     local V=$2
-    xml ed -L \
+    $XML_CMD ed -L \
         -u "$P" -v "$V" \
         tmp/tmp.xml
 }
 
-xml fo vm.xml >tmp/tmp.xml
+$XML_CMD fo vm.xml >tmp/tmp.xml
 # vda C:
 setDisk 1 $PWD/rwdata/drive-c.qcow2
 # sda - cdrom1 D:
@@ -59,11 +62,11 @@ setElVal domain/vcpu 4
 
 for ID in `seq 1 4`; do
     echo "#$ID"
-    xml sel -t -c "/domain/devices/disk[$ID]"  tmp/tmp.xml | xml fo | highlight -S xml -O xterm256
+    $XML_CMD sel -t -c "/domain/devices/disk[$ID]"  tmp/tmp.xml | xml fo | highlight -S xml -O xterm256
 done
 
 echo "...boot:"
-xml sel -t -c "/domain/os"  tmp/tmp.xml | xml fo | highlight -S xml -O xterm256
+$XML_CMD sel -t -c "/domain/os"  tmp/tmp.xml | xml fo | highlight -S xml -O xterm256
 
 echo "...disks:"
-xml sel -t -m "/domain/devices/disk" -v 'concat(target/@dev,":",source/@file)' -n tmp/tmp.xml
+$XML_CMD sel -t -m "/domain/devices/disk" -v 'concat(target/@dev,":",source/@file)' -n tmp/tmp.xml
