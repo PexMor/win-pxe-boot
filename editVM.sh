@@ -14,6 +14,9 @@ fi
 
 : ${WIN_ISO:=$PWD/rwdata/Win10_21H1_English_x64.iso}
 
+if [ ! -f "$PWD/rwdata/drive-c.qcow2" ]; then
+    qemu-img create -f qcow2 "$PWD/rwdata/drive-c.qcow2" 40G
+fi
 echo "-=[ vda C:"
 setDisk 1 $PWD/rwdata/drive-c.qcow2
 if [ ! -f "$WIN_ISO" ]; then
